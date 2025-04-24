@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>E_commerce | About Us</title>
+    <style>
+        .select{
+      color: blue;
+    }
+    </style>
+</head>
+<body>
+   <div class="min-h-screen">
+     <!-- header -->
+     <header class="w-full  py-4 px-7 flex justify-between items-center ">
+
+        <!-- logo -->
+    
+        <div class="flex gap-2 items-center">
+        <a href="index.html"><img src="./Images/Home page images/Icon.png" class="w-10 h-10 " alt=""></a> 
+        <a class="font-semibold text-3xl text-blue-500" href="index.html" >E-Commerce</a>
+        </div>
+    
+        <!-- nav -->
+         <nav class="flex gap-5 text-xl">
+            <a href="index.html" class="select button" onclick="currentPage(this)">Home</a>
+            <a href="contact.html" class="button" onclick="currentPage(this)">Contact</a>
+            <a href="about.html" class="button" onclick="currentPage(this)">About</a>
+         </nav>
+    
+         <!-- Admin Dashboard Btn -->
+         <div class="flex gap-3 items-center">
+          <a href=""><img src="./Images/Home page images/Wishlist.png" alt="" class="w-10 h-10"></a>
+          <a href=""><img src="./Images/Home page images/cart.png" alt="" class="w-10 h-10"></a>
+        <a href="dashborard.html"><button class="bg-blue-600 text-nowrap text-white font-semibold text-lg px-6 py-3 rounded-lg">Admin Dashboard</button></a>  
+        </div>
+    
+    
+    </header>
+    <hr>
+
+    <!-- section -->
+     <section class="p-16">
+        <h1 class="text-center text-4xl font-bold mt-8">About <span class="text-blue-700">E-Commerce</span></h1>
+        <p class="text-center mt-4 text-xl">Welcome to E-Commerce, your number one destination for high-quality products. We’re dedicated to giving you the best shopping experience, focusing on reliability, customer service, and uniqueness.</p>
+
+        <div class="flex mt-10 gap-4">
+            <div class="w-1/2 h-52  p-4 bg-slate-50 rounded-lg shadow-lg">
+                <h1 class="text-blue-700 text-2xl font-semibold">Our Mission</h1>
+            </div>
+            <div class="w-1/2 h-52 bg-slate-50 p-4  rounded-lg shadow-lg">
+                <h1 class="text-blue-700 text-2xl font-semibold">Our Vision</h1>
+            </div>
+        </div>
+        
+        <h1 class="text-center text-4xl font-bold mt-8">Why <span class="text-blue-700">Choose Us ?</span></h1>
+        <div class="flex mt-10 gap-4">
+          <div class="w-1/3 h-36  p-4 bg-slate-50 rounded-lg shadow-lg">
+              <h1 class="text-blue-700 text-xl font-semibold text-center">High-Quality Products</h1>
+          </div>
+          <div class="w-1/3 h-36 bg-slate-50 p-4  rounded-lg shadow-lg text-center">
+              <h1 class="text-blue-700 text-xl font-semibold">Fast & Secure Shipping</h1>
+          </div>
+          <div class="w-1/3 h-36 bg-slate-50 p-4  rounded-lg shadow-lg text-center">
+            <h1 class="text-blue-700 text-xl font-semibold">Excellent Customer Support</h1>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <h1 class="mt-10 text-center text-2xl font-medium">Start Shopping Now!</h1>
+      <p class="text-center mt-4 text-lg">Explore our wide range of products and enjoy an amazing shopping experience.</p>
+
+      <button class=" bg-blue-700 mt-4 hover:bg-blue-600 font-semibold px-6 py-3 text-white rounded-lg">Browse Products</button>
+      </div>
+
+     </section>
+   </div>
+
+     <!-- footer -->
+     <footer class="w-scrren p-6 bg-[#001F3F]">
+        <p class="text-white text-center">© E-Commerce. All Rights Reserved.</p>
+     </footer>
+
+     <script>
+        function currentPage(page){
+      let all = document.querySelectorAll(".button")
+      all.forEach(btn=>btn.classList.remove('select'))
+      page.classList.add('select')
+    }
+     </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>E_commerce | Contact</title>
+    <style>
+        .select{
+      color: blue;
+    }
+    </style>
+</head>
+<body>
+   <div class="min-h-screen">
+     <!-- header -->
+     <header class="w-full  py-4 px-7 flex justify-between items-center ">
+
+        <!-- logo -->
+    
+        <div class="flex gap-2 items-center">
+        <a href="index.html"><img src="./Images/Home page images/Icon.png" class="w-10 h-10 " alt=""></a> 
+        <a class="font-semibold text-3xl text-blue-500" href="index.html" >E-Commerce</a>
+        </div>
+    
+        <!-- nav -->
+         <nav class="flex gap-5 text-xl">
+            <a href="index.html" class="select button" onclick="currentPage(this)">Home</a>
+            <a href="contact.html" class="button" onclick="currentPage(this)">Contact</a>
+            <a href="about.html" class="button" onclick="currentPage(this)">About</a>
+         </nav>
+    
+         <!-- Admin Dashboard Btn -->
+         <div class="flex gap-3 items-center">
+          <a href=""><img src="./Images/Home page images/Wishlist.png" alt="" class="w-10 h-10"></a>
+          <a href=""><img src="./Images/Home page images/cart.png" alt="" class="w-10 h-10"></a>
+        <a href="dashborard.html"><button class="bg-blue-600 text-nowrap text-white font-semibold text-lg px-6 py-3 rounded-lg">Admin Dashboard</button></a>  
+        </div>
+    
+    
+    </header>
+    <hr>
+
+    <!-- contact form -->
+    <div class="flex justify-center items-center h-screen">
+        <form class="flex flex-col gap-4 w-1/2 relative rounded-lg p-6 bg-white shadow-lg">
+            <h1 class="text-center text-3xl font-semibold text-blue-600">Contact Us</h1>
+            <p class="text-nowrap text-center">Have any questions? Feel free to reach out to us!</p>
+    
+            <div class="flex flex-col gap-2">
+                <label for="email" class="text-md font-medium">Your Email</label>
+            <input type="text" placeholder="Enter Email" class="px-4 py-2 text-lg border border-gray-500 rounded-lg">
+            </div>
+    
+            <div class="flex flex-col gap-2">
+                <label for="password" class="text-md font-medium">Subject</label>
+            <input type="text" placeholder="Enter Subject" class="px-4 py-2 text-lg border border-gray-500 rounded-lg">
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="password" class="text-md font-medium">Your Message</label>
+                <textarea name="" id="" placeholder="Write your message here..." class="px-4 py-2 text-lg border border-gray-500 rounded-lg"></textarea>
+            </div>
+
+            <button class="bg-blue-700 hover:bg-blue-600 p-2 text-lg text-white rounded-lg mt-2 ">Login</button>
+        </form>
+    </div>
+   </div>
+
+     <!-- footer -->
+     <footer class="w-scrren p-6 bg-[#001F3F]">
+        <p class="text-white text-center">© E-Commerce. All Rights Reserved.</p>
+     </footer>
+
+     <script>
+        function currentPage(page){
+      let all = document.querySelectorAll(".button")
+      all.forEach(btn=>btn.classList.remove('select'))
+      page.classList.add('select')
+    }
+     </script>
+</body>
+</html>

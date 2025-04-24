@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>E-Commerce | login</title>
+</head>
+<body class="">
+    <!-- Header -->
+    <header class="w-full  py-4 px-7 flex justify-between  bg-white items-center ">
+
+        <!-- logo -->
+
+        <div class="flex gap-2 items-center">
+        <a href="index.html"><img src="./Images/Home page images/Icon.png" class="w-10 h-10 " alt=""></a> 
+        <a class="font-semibold text-3xl text-blue-500" href="index.html" >E-Commerce</a>
+        </div>
+
+        <!-- nav -->
+         <nav class="flex gap-5 text-xl">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+         </nav>
+
+         <!-- Admin Dashboard Btn -->
+         <div class="flex gap-3 items-center">
+          <a href=""><img src="./Images/Home page images/Wishlist.png" alt="" class="w-10 h-10"></a>
+          <a href=""><img src="./Images/Home page images/cart.png" alt="" class="w-10 h-10"></a>
+        <a href="dashborard.html"><button class="bg-blue-600 text-nowrap text-white font-semibold text-lg px-6 py-3 rounded-lg">Admin Dashboard</button></a>  
+        </div>
+
+
+    </header>
+    <hr>
+    
+    <!-- login form -->
+    <div class="flex justify-center items-center h-screen">
+        <form class="flex flex-col gap-4 w-96 relative rounded-lg p-6 bg-white  shadow-lg">
+            <h1 class="text-center text-3xl font-semibold text-blue-600">Login</h1>
+    
+            <label for="email" class="text-lg font-medium">Email</label>
+            <input type="text" placeholder="Enter Email" class="px-4 py-2 text-lg border border-gray-500 rounded-lg">
+    
+            <label for="password" class="text-lg font-medium">Password</label>
+            <input type="text" placeholder="Enter Password" class="px-4 py-2 text-lg border border-gray-500 rounded-lg">
+            <button class="bg-blue-700 hover:bg-blue-600 p-2 text-lg text-white rounded-lg mt-2 ">Login</button>
+        </form>
+    </div>
+
+    <!-- footer -->
+     <footer class="w-scrren p-6 bg-[#001F3F]">
+        <p class="text-white text-center">© E-Commerce. All Rights Reserved.</p>
+     </footer>
+
+</body>
+</html>
