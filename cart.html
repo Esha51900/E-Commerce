@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce | Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="w-full  py-4 px-7 bg-white flex justify-between items-center ">
+
+        <!-- logo -->
+    
+        <div class="flex gap-2 items-center">
+        <a href="index.html"><img src="./Images/Home page images/Icon.png" class="w-10 h-10 " alt=""></a> 
+        <a class="font-semibold text-3xl text-blue-500" href="index.html" >E-Commerce</a>
+        </div>
+    
+        <!-- nav -->
+         <nav class="flex gap-6 text-xl">
+            <a href="index.html" class="button" onclick="currentPage(this)">Home</a>
+            <a href="contact.html" class="button" onclick="currentPage(this)">Contact</a>
+            <a href="about.html" class="button" onclick="currentPage(this)">About</a>
+         </nav>
+    
+         <!-- Admin Dashboard Btn -->
+         <div class="flex gap-3 items-center">
+          <a href="/wishList.html"><img src="./Images/Home page images/Wishlist.png" alt="" class="w-10 h-10"></a>
+          <a href="/cart.html"><img src="./Images/Home page images/cart.png" alt="" class="w-10 h-10"></a>
+        <a href="dashborard.html"><button class="bg-blue-600 text-white font-semibold text-lg px-6 py-3 text-nowrap rounded-lg">Admin Dashboard</button></a>  
+        </div>
+    
+    
+    </header>
+    <hr>
+
+    <div class="px-20 py-4" id="empty">
+        <h1 class="text-3xl font-bold text-center">Your Cart <span class="text-3xl font-bold" ></span></h1>
+
+        <table class="border border-collapse border-gray-200 shadow-lg min-w-full mt-10 bg-white" id="table">
+            <thead class="bg-gray-200" >
+                <tr>
+                <th class="text-center p-4  border-gray-200 border">Product</th>
+                <th class="text-center p-4 border-gray-200 border">Price</th>
+                <th class="text-center p-4 border-gray-200 border">Quantity</th>
+                <th class="text-center p-4 border-gray-200 border">Total</th>
+                <th class="text-center p-4 border-gray-200 border">Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<script src="cart.js"></script>
+</html>
