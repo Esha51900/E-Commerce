@@ -6,8 +6,10 @@
     <title>E-Commerce | Cart</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
-    <header class="w-full  py-4 px-7 bg-white flex justify-between items-center ">
+<body class=" bg-gray-100">
+    <div class="h-screen">
+        <!-- header -->
+    <header class="w-full bg-white top-0 fixed  py-4 px-7 flex justify-between items-center ">
 
         <!-- logo -->
     
@@ -26,15 +28,17 @@
          <!-- Admin Dashboard Btn -->
          <div class="flex gap-3 items-center">
           <a href="/wishList.html"><img src="./Images/Home page images/Wishlist.png" alt="" class="w-10 h-10"></a>
-          <a href="/cart.html"><img src="./Images/Home page images/cart.png" alt="" class="w-10 h-10"></a>
+          <div class="flex flex-col">
+            <a href="/cart.html"><img src="./Images/Home page images/cart.png" alt="" class="w-10 h-7"></a>
+          <hr class="px-2 py-0.5 bg-blue-500 rounded-lg">
+          </div>
         <a href="dashborard.html"><button class="bg-blue-600 text-white font-semibold text-lg px-6 py-3 text-nowrap rounded-lg">Admin Dashboard</button></a>  
         </div>
     
     
-    </header>
-    <hr>
+    </header>>
 
-    <div class="px-20 py-4" id="empty">
+    <div class="px-20 py-4 mt-20" id="empty">
         <h1 class="text-3xl font-bold text-center">Your Cart <span class="text-3xl font-bold" ></span></h1>
 
         <table class="border border-collapse border-gray-200 shadow-lg min-w-full mt-10 bg-white" id="table">
@@ -52,6 +56,11 @@
             </tbody>
         </table>
     </div>
+    </div>
+     <!-- footer -->
+     <footer class="w-scrren p-6 bg-[#001F3F]">
+        <p class="text-white text-center">© E-Commerce. All Rights Reserved.</p>
+      </footer>
 </body>
 
 <script src="cart.js"></script>

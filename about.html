@@ -6,40 +6,38 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>E_commerce | About Us</title>
     <style>
-        .select{
-      color: blue;
-    }
+        
     </style>
 </head>
 <body>
    <div class="min-h-screen">
      <!-- header -->
-     <header class="w-full  py-4 px-7 flex justify-between items-center ">
+     <header class="w-full bg-white top-0 fixed  py-4 px-7 flex justify-between items-center ">
 
-        <!-- logo -->
-    
-        <div class="flex gap-2 items-center">
-        <a href="index.html"><img src="./Images/Home page images/Icon.png" class="w-10 h-10 " alt=""></a> 
-        <a class="font-semibold text-3xl text-blue-500" href="index.html" >E-Commerce</a>
-        </div>
-    
-        <!-- nav -->
-         <nav class="flex gap-5 text-xl">
-            <a href="index.html" class="select button" onclick="currentPage(this)">Home</a>
-            <a href="contact.html" class="button" onclick="currentPage(this)">Contact</a>
-            <a href="about.html" class="button" onclick="currentPage(this)">About</a>
-         </nav>
-    
-         <!-- Admin Dashboard Btn -->
-         <div class="flex gap-3 items-center">
-          <a href="/wishList.html"><img src="./Images/Home page images/Wishlist.png" alt="" class="w-10 h-10"></a>
-          <a href="/cart.html"><img src="./Images/Home page images/cart.png" alt="" class="w-10 h-10"></a>
-        <a href="dashborard.html"><button class="bg-blue-600 text-nowrap text-white font-semibold text-lg px-6 py-3 rounded-lg">Admin Dashboard</button></a>  
-        </div>
-    
-    
-    </header>
-    <hr>
+      <!-- logo -->
+  
+      <div class="flex gap-2 items-center">
+      <a href="index.html"><img src="./Images/Home page images/Icon.png" class="w-10 h-10 " alt=""></a> 
+      <a class="font-semibold text-3xl text-blue-500" href="index.html" >E-Commerce</a>
+      </div>
+  
+      <!-- nav -->
+       <nav class="flex gap-6 text-xl">
+          <a href="index.html" class=" " >Home</a>
+          <a href="contact.html" class="" >Contact</a>
+          <a href="about.html" class="text-blue-600">About</a>
+       </nav>
+  
+       <!-- Admin Dashboard Btn -->
+       <div class="flex gap-3 items-center">
+        <a href="/wishList.html"><img src="./Images/Home page images/Wishlist.png" alt="" class="w-10 h-10"></a>
+        <a href="/cart.html"><img src="./Images/Home page images/cart.png" alt="" class="w-10 h-10"></a>
+      <a href="dashborard.html"><button class="bg-blue-600 text-white font-semibold text-lg px-6 py-3 text-nowrap rounded-lg">Admin Dashboard</button></a>  
+      </div>
+  
+  
+  </header>
+  <hr class="mt-24">
 
     <!-- section -->
      <section class="p-16">
@@ -84,11 +82,7 @@
      </footer>
 
      <script>
-        function currentPage(page){
-      let all = document.querySelectorAll(".button")
-      all.forEach(btn=>btn.classList.remove('select'))
-      page.classList.add('select')
-    }
+        
      </script>
 </body>
 </html>

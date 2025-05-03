@@ -1,123 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Wishlist</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
+  </head>
 
-<body>
-    <header class="w-full  py-4 px-7 flex justify-between items-center ">
-
+  <body>
+    <div class="h-screen">
+      <!-- header -->
+      <header
+        class="w-full bg-white top-0 fixed py-4 px-7 flex justify-between items-center"
+      >
         <!-- logo -->
 
         <div class="flex gap-2 items-center">
-            <a href="index.html"><img src="./Images/Home page images/Icon.png" class="w-10 h-10 " alt=""></a>
-            <a class="font-semibold text-3xl text-blue-500" href="index.html">E-Commerce</a>
+          <a href="index.html"
+            ><img
+              src="./Images/Home page images/Icon.png"
+              class="w-10 h-10"
+              alt=""
+          /></a>
+          <a class="font-semibold text-3xl text-blue-500" href="index.html"
+            >E-Commerce</a
+          >
         </div>
 
         <!-- nav -->
         <nav class="flex gap-6 text-xl">
-            <a href="index.html" class="button" onclick="currentPage(this)">Home</a>
-            <a href="contact.html" class="button" onclick="currentPage(this)">Contact</a>
-            <a href="about.html" class="button" onclick="currentPage(this)">About</a>
+          <a href="index.html" class="button" onclick="currentPage(this)"
+            >Home</a
+          >
+          <a href="contact.html" class="button" onclick="currentPage(this)"
+            >Contact</a
+          >
+          <a href="about.html" class="button" onclick="currentPage(this)"
+            >About</a
+          >
         </nav>
 
         <!-- Admin Dashboard Btn -->
         <div class="flex gap-3 items-center">
-            <a href="/wishList.html"><img src="./Images/Home page images/Wishlist.png" alt="" class="w-10 h-10"></a>
-            <a href="/cart.html"><img src="./Images/Home page images/cart.png" alt="" class="w-10 h-10"></a>
-            <a href="dashborard.html"><button
-                    class="bg-blue-600 text-white font-semibold text-lg px-6 py-3 text-nowrap rounded-lg">Admin
-                    Dashboard</button></a>
+          <div class="flex flex-col">
+            <a href="/wishList.html"
+              ><img
+                src="./Images/Home page images/Wishlist.png"
+                alt=""
+                class="w-10 h-7"
+            /></a>
+            <hr class="px-4 py-0.5 rounded-md bg-blue-500" />
+          </div>
+          <a href="/cart.html"
+            ><img
+              src="./Images/Home page images/cart.png"
+              alt=""
+              class="w-10 h-10"
+          /></a>
+          <a href="dashborard.html"
+            ><button
+              class="bg-blue-600 text-white font-semibold text-lg px-6 py-3 text-nowrap rounded-lg"
+            >
+              Admin Dashboard
+            </button></a
+          >
         </div>
-
-
-    </header>
-    <hr>
-    <div class="bg-gray-100 h-screen p-6" >
-        <div class="max-w-6xl mx-auto bg-white shadow-md rounded-lg p-6 " id="maindiv">
-            <h1 class="text-2xl font-bold text-center mb-6 text-blue-800">My Wishlist</h1>
-            <div class="overflow-x-auto">
-                <table id="wholeTable" class="min-w-full text-sm text-left text-gray-600">
-                    <thead class="bg-gray-200 text-gray-700 uppercase text-xs">
-                        <tr>
-                            <th class="px-6 py-3">Product</th>
-                            <th class="px-6 py-3">Name</th>
-                            <th class="px-6 py-3">Price</th>
-                            <th class="px-6 py-3">Stock</th>
-                            <th class="px-6 py-3">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y w-16 divide-gray-100" id="table">
-
-                        <!-- Add more rows here -->
-                    </tbody>
-                </table>
-            </div>
+      </header>
+      <div class="bg-gray-100 h-screen p-6 mt-24">
+        <div
+          class="max-w-6xl mx-auto bg-white shadow-md rounded-lg p-6"
+          id="maindiv"
+        >
+          <h1 class="text-2xl font-bold text-center mb-6 text-blue-800">
+            My Wishlist
+          </h1>
+          <div class="overflow-x-auto">
+            <table
+              id="wholeTable"
+              class="min-w-full text-sm text-left text-gray-600"
+            >
+              <thead class="bg-gray-200 text-gray-700 uppercase text-xs">
+                <tr>
+                  <th class="px-6 py-3">Product</th>
+                  <th class="px-6 py-3">Name</th>
+                  <th class="px-6 py-3">Price</th>
+                  <th class="px-6 py-3">Stock</th>
+                  <th class="px-6 py-3">Actions</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y w-16 divide-gray-100" id="table">
+                <!-- Add more rows here -->
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
     </div>
+    <!-- footer -->
+    <footer class="w-scrren p-6 bg-[#001F3F]">
+      <p class="text-white text-center">© E-Commerce. All Rights Reserved.</p>
+    </footer>
 
-
-    <script>
-        const wishListProducts = JSON.parse(localStorage.getItem("wishlist"))
-        console.log(wishListProducts)
-
-        const tableBody = document.querySelector("#table")
-        
-function mapInTable(){
-    
-    
-    wishListProducts.map(e=>{
-       
-        const tableRow = document.createElement('tr');
-         tableBody.appendChild(tableRow)
-        tableRow.innerHTML = `                        
-                    <td class="px-6 py-4" >
-                        <img src="" alt="" class="img" width="64px" height="64px"
-                            class="w-16 h-16 object-cover rounded" />
-                    </td>
-                    <td class="px-6 py-4 font-medium text-gray-900 name" id="name"> </td>
-                    <td class="px-6 py-4 price" id="price"></td>
-                    <td class="px-6 py-4 text-green-600 font-semibold">In Stock</td>
-                    <td class="px-6 py-4 flex space-x-2">
-                        <button class="bg-blue-500 hover:bg-blue-600 text-white text-xs px-7 py-4 rounded text-nowrap">Add to
-                            Cart</button>
-                        <button
-                            class="bg-red-500 text-nowrap hover:bg-red-600 text-white text-xs px-7 py-4 rounded">Remove</button>
-                    </td>
-                `
-                const image = tableRow.querySelector(".img")
-                image.src=e.path
-                const name = tableRow.querySelector(".name")
-                name.innerText=e.title
-                const price = tableRow.querySelector(".price")
-                price.innerText=e.price
-        
-    })
-}
-
-
-        if(wishListProducts != null){
-            mapInTable()
-        }
-        else{
-            const div = document.querySelector("#maindiv")
-            div.innerHTML=""
-            div.innerText="Your wish list is empty"
-            div.style.cssText="text-align:center; font-size:20px"
-        }
-        
-        
-
-       
-        
-
-    
-        
-    </script>
-</body>
-
+    <script src="wishlist.js"></script>
+  </body>
 </html>

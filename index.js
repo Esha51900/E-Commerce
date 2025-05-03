@@ -123,6 +123,8 @@
         ]
         let WishList=[]
         let cart = []
+        let flagForWishlist =false
+        let flagForCart = false;
         
         function mappingProducts(array){
           array.map(element=>{
@@ -157,18 +159,48 @@
             price.style.cssText="color:#3A59D1; font-size:22px"
             title.style.cssText="font-size:24px; font-weight:30px"
             btnDiv.style.cssText="display:flex; gap:10px"
-            WishlistBtn.style.cssText="background-color:red; color:white; padding-left:10px; padding-right:10px; padding-top:10px; padding-bottom:10px; border-radius:8px;  font-size:16px; font-weight:600;"
-            cartBtn.style.cssText="background-color:gray; color:white; padding-left:22px; padding-right:22px; padding-top:10px; padding-bottom:10px; border-radius:8px; font-size:16px; font-weight:600;"
+            WishlistBtn.style.cssText="background-color:white; border:2px solid gray;  padding-left:10px; padding-right:10px; padding-top:10px; padding-bottom:10px; border-radius:8px;  font-size:16px; font-weight:600;"
+            cartBtn.style.cssText="background-color:white; border:2px solid gray;  padding-left:22px; padding-right:22px; padding-top:10px; padding-bottom:10px; border-radius:8px; font-size:16px; font-weight:600;"
 
            
-
+            // product added to wishlist 
             WishlistBtn.addEventListener("click",function(){
-              WishList.push(element)
-               localStorage.setItem("wishlist",JSON.stringify(WishList))
+              if(WishList.length>0)
+              {
+                for(let i = 0;i<WishList.length;i++){
+                  if(WishList[i].title == element.title ){
+                    flagForWishlist = true
+                  }
+                }
+              }
+              if(flagForWishlist == true){
+                alert("Already exist in wishlist!")
+              }
+              else{
+                WishList.push(element)
+                localStorage.setItem("wishlist",JSON.stringify(WishList))
+              }
+               
             })
+
+            // product added to cart
              cartBtn.addEventListener("click", function () {
-              cart.push(element)
-              localStorage.setItem("cart",JSON.stringify(cart))
+              if(cart.length>0)
+                {
+                  for(let i = 0;i<cart.length;i++){
+                    if(cart[i].title == element.title ){
+                      flagForCart = true
+                    }
+                  }
+                }
+                if(flagForCart == true){
+                  alert("Already exist in cart!")
+                }
+                else{
+                  cart.push(element)
+                  localStorage.setItem("cart",JSON.stringify(cart))
+                }
+              
             })
         })
         }
