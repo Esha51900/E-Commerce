@@ -6,7 +6,7 @@
     <title>E-Commerce | Cart</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class=" bg-gray-100">
+<body class="">
     <div class="h-screen">
         <!-- header -->
     <header class="w-full bg-white top-0 fixed  py-4 px-7 flex justify-between items-center ">
@@ -36,12 +36,14 @@
         </div>
     
     
-    </header>>
+    </header>
+    <hr class="mt-24">
 
-    <div class="px-20 py-4 mt-20" id="empty">
+    <div class="px-20 py-4 mt-2" id="empty">
         <h1 class="text-3xl font-bold text-center">Your Cart <span class="text-3xl font-bold" ></span></h1>
 
-        <table class="border border-collapse border-gray-200 shadow-lg min-w-full mt-10 bg-white" id="table">
+        <div class="bg-white p-4 mt-10">
+            <table class="border border-collapse border-gray-200 shadow-lg min-w-full bg-white" id="table">
             <thead class="bg-gray-200" >
                 <tr>
                 <th class="text-center p-4  border-gray-200 border">Product</th>
@@ -55,6 +57,11 @@
 
             </tbody>
         </table>
+        <div class="flex justify-between mt-4">
+            <h1 class="text-2xl font-semibold total">Total: $</h1>
+            <button class="px-4 py-2 rounded-md bg-blue-600 text-white">Check out</button>
+        </div>
+        </div>
     </div>
     </div>
      <!-- footer -->

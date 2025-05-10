@@ -179,6 +179,7 @@
               else{
                 WishList.push(element)
                 localStorage.setItem("wishlist",JSON.stringify(WishList))
+                alert("Product added to wishlist")
               }
                
             })
@@ -199,6 +200,7 @@
                 else{
                   cart.push(element)
                   localStorage.setItem("cart",JSON.stringify(cart))
+                  alert("Product added to cart")
                 }
               
             })
@@ -238,7 +240,15 @@
         function  electronics(){
            let electronics = products.filter(e=>e.category == "electronics")
            container.innerHTML=""
-           mappingProducts(electronics)
+           if(electronics.length>0){
+            mappingProducts(electronics)
+           }
+           else{
+            const div = document.createElement("div")
+            container.appendChild(div)
+            div.innerText= "Empty"
+            div.style.cssText = "font-size:30px; font-weight:40px;"
+           }
           
         }
 
@@ -247,7 +257,15 @@
         function  clothing(){
            let clothes = products.filter(e=>e.category == "Clothing")
            container.innerHTML=""
-           mappingProducts(clothes)
+           if(clothes.length>0){
+            mappingProducts(clothes)
+           }
+           else{
+            const div = document.createElement("div")
+            container.appendChild(div)
+            div.innerText= "Empty"
+            div.style.cssText = "font-size:30px; font-weight:40px;"
+           }
           
         }
     
@@ -257,7 +275,94 @@
         function  jewellery(){
            let jewellery = products.filter(e=>e.category == "jewellery")
            container.innerHTML=""
-           mappingProducts(jewellery)
+           if(jewellery.length>0){
+            mappingProducts(jewellery)
+           }
+           else{
+            const div = document.createElement("div")
+            container.appendChild(div)
+            div.innerText= "Empty"
+            div.style.cssText = "font-size:30px; font-weight:40px;"
+           }
           
         }
+
+        // seperate home furniture products
+        function  furniture(){
+          let homefurniture = products.filter(e=>e.category == "homefurniture")
+          container.innerHTML=""
+          if(homefurniture.length>0){
+            mappingProducts(homefurniture)
+           }
+           else{
+            const div = document.createElement("div")
+            container.appendChild(div)
+            div.innerText= "Empty"
+            div.style.cssText = "font-size:30px; font-weight:40px;"
+           }
+       }
+
+       // seperate beauty products
+       function  beauty(){
+        let beautyProducts = products.filter(e=>e.category == "beauty")
+        container.innerHTML=""
+        if(beautyProducts.length>0){
+          mappingProducts(beautyProducts)
+         }
+         else{
+          const div = document.createElement("div")
+          container.appendChild(div)
+          div.innerText= "Empty"
+          div.style.cssText = "font-size:30px; font-weight:40px;"
+         }
+     }
+
+       // seperate games
+       function  games(){
+        let games = products.filter(e=>e.category == "games")
+        container.innerHTML=""
+        if(games.length>0){
+          mappingProducts(games)
+         }
+         else{
+          const div = document.createElement("div")
+          container.appendChild(div)
+          div.innerText= "Empty"
+          div.style.cssText = "font-size:30px; font-weight:40px;"
+         }
+     }
+
+     // seperate sports products
+     function  sports(){
+      let sports = products.filter(e=>e.category == "sports")
+      container.innerHTML=""
+      if(sports.length>0){
+        mappingProducts(sports)
+       }
+       else{
+        const div = document.createElement("div")
+        container.appendChild(div)
+        div.innerText= "Empty"
+        div.style.cssText = "font-size:30px; font-weight:40px;"
+       }
+   }
+
+   // seperate shoes
+   function  shoes(){
+    let shoes = products.filter(e=>e.category == "shoes")
+    container.innerHTML=""
+    if(shoes.length>0){
+      mappingProducts(shoes)
+     }
+     else{
+      const div = document.createElement("div")
+      container.appendChild(div)
+      div.innerText= "Empty"
+      div.style.cssText = "font-size:30px; font-weight:40px;"
+     }
+ }
+
+     
+
+     
    
